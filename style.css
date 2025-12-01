@@ -1,0 +1,383 @@
+body {
+    background-color: #130428;
+}
+
+nav {
+    display: flex;
+    background-color: #1A0B2E;
+    width: 1470px;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+}
+
+#logo {
+    width: 85px;
+    height: 65px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+#navOption {
+    display: flex;
+    list-style: none;
+    margin-left: 400px;
+    margin-top: 20px;
+    align-items: center;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+#navOption>li {
+    margin-left: 50px;
+}
+
+#navOption a {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  padding-bottom: 3px;
+  transition: color 0.3s ease;
+}
+
+#navOption a:hover {
+  color: #B79CFF;
+}
+
+#navOption a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #B79CFF;
+  transition: 0.3s ease;
+}
+
+#navOption a:hover::after {
+  width: 100%;
+}
+
+section {
+    min-height: 900px;
+}
+
+#main1 {
+    margin-top: 30px;
+}
+
+#inpic {
+    width: 330px;
+    height: 400px;
+    margin-left: 45px;
+    z-index: 10;
+    position: relative;
+}
+
+#inpic-back {
+    width: 360px;
+    height: 379px;
+    margin-left: 80px;
+    margin-top: 75px;
+    background-image: radial-gradient(#561d8b 0%, #19044900 170px);
+    border-radius: 50%;
+    z-index: 10;
+    position: relative;
+}
+
+#hello-text {
+    font-family: monospace;
+    color: #fff;
+    margin-top: -360px;
+    margin-left: 410px;
+    z-index: 10;
+    position: relative;
+}
+
+#small-intro-text {
+    font-family: monospace;
+    font-size: 30px;
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 415px;
+    z-index: 10;
+    position: relative;
+}
+
+#big-intro-text {
+    font-family: monospace;
+    font-size: 35px;
+    color: #fff;
+    margin-top: 5px;
+    margin-left: 425px;
+    margin-bottom: 0;
+    z-index: 10;
+    position: relative;
+}
+
+#portfolio-text {
+    font-family: monospace;
+    color: #fff;
+    margin-top: 15px;
+    margin-left: 605px;
+    font-size: 20px;
+    z-index: 10;
+    position: relative;
+}
+
+#arow {
+    position: relative;
+    z-index: 1;
+    margin-left: 285px;
+    width: 140px;
+    margin-bottom: -120px;
+}
+
+#main2{
+    margin-top: 200px;
+
+}
+
+#devoloper {
+    font-family: monospace;
+    color: #fff;
+    margin-top: -245px;
+    margin-left: 140px;
+    font-size: 50px;
+    z-index: 10;
+    position: relative;
+}
+
+#specialized {
+    font-family: monospace;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 140px;
+    font-size: 30px;
+    z-index: 10;
+    position: relative;
+}
+
+#html {
+    width: 105px;
+    z-index: 10;
+    position: relative;
+    margin-left: 400px;
+    margin-top: -55px;
+}
+
+#css {
+    width: 100px;
+    z-index: 10;
+    position: relative;
+    margin-left: 490px;
+    margin-top: -102px;
+}
+
+#javascript {
+    width: 67px;
+    z-index: 10;
+    position: relative;
+    margin-left: 595px;
+    margin-top: -83px;
+}
+
+#sql {
+    width: 60px;
+    z-index: 10;
+    position: relative;
+    margin-left: 682px;
+    margin-top: -75px;
+}
+
+#main2-back{
+    width: 750px;
+    height: 350px;
+    background-image: radial-gradient(#561d8b 0%, #19044900 350px);
+    z-index: 1;
+    position: relative;
+    margin-left: 75px;
+}
+
+#about{
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    margin-top: 90px;
+    z-index: 10;
+    position: relative;
+}
+
+#skils{
+    color: #fff;
+    font-size: 30px;
+    margin-left: 310px;
+    margin-top: -332px;
+    font-family: monospace;
+    z-index: 10;
+    position: relative;
+}
+
+#c{
+    width: 200px;
+    height: 200px;
+    margin-left: 400px;
+    margin-top: -30px;
+    z-index: 10;
+    position: relative;
+}
+
+#java{
+    width: 200px;
+    height: 200px;
+    margin-left: 30px;
+    z-index: 10;
+    position: relative;
+}
+
+#python{
+    width: 200px;
+    height: 200px;
+    margin-left: 30px;
+    z-index: 10;
+    position: relative;
+}
+
+#main3-back{
+    width: 500px;
+    height: 431px;
+    background-image: radial-gradient(#561d8b 0%, #19044900 260px);
+    z-index: 1;
+    position: relative;
+    margin-left: 450px;
+    margin-top: 150px;
+}
+
+#main4-back{
+    width: 800px;
+    height: 431px;
+    background-image: radial-gradient(#561d8b 0%, #19044900 433px);
+    z-index: 1;
+    position: relative;
+    margin-left: 410px;
+    margin-top: 150px;
+}
+
+#exlpro{
+    width: 287px;
+    height: 51px;
+    color: white;
+    font-size: 31px;
+    font-family: monospace;
+    margin-top: -305px;
+    margin-bottom: 5px;
+    margin-left: 140px;
+    z-index: 10;
+    position: relative;
+}
+
+#project-about{
+    width: 600px;
+    height: 130px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #421d64 394px,#61b2ffab, #aed5faa3);
+    margin-left: 118px;
+    z-index: 10;
+    position: relative;
+}
+
+#project-about>p{
+    color: white;
+    font-size:15px;
+    font-family: monospace;
+    padding: 15px;
+    margin: 0;
+    z-index: 10;
+    position: relative;
+}
+
+#project1pic{
+    width: 500px;
+    height: 330px;
+    margin-left: 700px;
+    margin-top: -241px;
+    z-index: 9;
+    position: relative;
+    box-shadow: -20px -20px #000000c7;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+
+footer{
+    height: 300px;
+    background-color: #1A0B2E;
+}
+
+footer>p{
+    font-size: 20px;
+    font-family: monospace;
+    color: white;
+}
+
+#menu{
+    font-size: 20px;
+    font-family: monospace;
+    color: white;
+}
+
+#service{
+    font-size: 20px;
+    font-family: monospace;
+    color: white;
+}
+
+#menu-option{
+    list-style: none;
+    text-decoration: none;
+    width: 121px;
+}
+
+
+#menu-option>li>a{
+    font-size: 20px;
+    font-family: monospace;
+    color: white;
+    text-decoration: none;
+}
+
+#service-option{
+    list-style: none;
+    text-decoration: none;
+    width: 121px;
+}
+
+#service-option>li>a{
+    font-size: 20px;
+    font-family: monospace;
+    color: white;
+    text-decoration: none;
+}
+
+#social-link{
+    width: 200px;
+    height: 100px;
+    background-color: #561d8b;
+}
+
+#facebook{
+    width: 30px;
+    height: 30px;
+}
+
+#gethub{
+    width: 45px;
+    height: 45px;
+}
+
+#instagram{
+    width: 45px;
+    height: 45px;
+}
