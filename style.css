@@ -2,74 +2,93 @@ body {
     background-color: #130428;
 }
 
-nav {
+/* NAV CONTAINER */
+.portfolio-nav {
+    width: 100%;
     display: flex;
-    background-color: #1A0B2E;
-    width: 1470px;
-    height: 65px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 11;
-}
-
-#logo {
-    width: 85px;
-    height: 65px;
-    border-radius: 50%;
-    margin-left: 20px;
-}
-
-#navOption {
-    display: flex;
-    list-style: none;
-    margin-left: 400px;
+    justify-content: center;
     margin-top: 20px;
+    position: sticky;
+    top: 20px;
+    /* distance from the top */
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.portfolio-con {
+    display: inline-flex;
     align-items: center;
-    font-size: 12px;
-    font-family: monospace;
+    gap: 32px;
+    padding: 12px 30px;
+
+    /* Dark-purple background to match your portfolio */
+    background: rgba(20, 0, 45, 0.7);
+    backdrop-filter: blur(10px);
+
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    box-shadow: 0 0 25px rgb(140 0 255 / 59%),
+        inset 0 0 12px rgba(255, 255, 255, 0.03);
+
+    font-family: "Fira Code", monospace;
+    /* matches your text style */
+    margin: 0 auto;
 }
 
-#navOption>li {
-    margin-left: 50px;
+/* NAV LINKS */
+.nav-item {
+    position: relative;
+    padding: 5px 15px;
+    border-radius: 999px;
+
+    font-size: 0.7rem;
+    color: #e0d9ff;
+    text-decoration: none;
+
+    transition: 0.25s ease;
 }
 
-#navOption a {
-  position: relative;
-  color: #ffffff;
-  text-decoration: none;
-  padding-bottom: 3px;
-  transition: color 0.3s ease;
+/* Hover */
+.nav-item:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #bb86ff;
 }
 
-#navOption a:hover {
-  color: #B79CFF;
+/* ACTIVE (selected page) */
+.nav-item.active {
+    color: #ffffff;
 }
 
-#navOption a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 2px;
-  background: #B79CFF;
-  transition: 0.3s ease;
+/* Active outline (glowing border) */
+.nav-item.active::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: inherit;
+
+    border: 1px solid #bb86ff;
+    /* neon light purple */
+    box-shadow:
+        0 0 12px #bb86ff,
+        0 0 30px rgba(187, 134, 255, 0.4);
 }
 
-#navOption a:hover::after {
-  width: 100%;
-}
 
 section {
     min-height: 900px;
 }
 
-#main1 {
-    margin-top: 30px;
-}
 
-#inpic {
+
+.inpic {
     width: 330px;
     height: 400px;
     margin-left: 45px;
@@ -77,7 +96,7 @@ section {
     position: relative;
 }
 
-#inpic-back {
+.inpic-back {
     width: 360px;
     height: 379px;
     margin-left: 80px;
@@ -88,7 +107,7 @@ section {
     position: relative;
 }
 
-#hello-text {
+.hello-text {
     font-family: monospace;
     color: #fff;
     margin-top: -360px;
@@ -97,7 +116,7 @@ section {
     position: relative;
 }
 
-#small-intro-text {
+.small-intro-text {
     font-family: monospace;
     font-size: 30px;
     color: #fff;
@@ -107,7 +126,7 @@ section {
     position: relative;
 }
 
-#big-intro-text {
+.big-intro-text {
     font-family: monospace;
     font-size: 35px;
     color: #fff;
@@ -118,7 +137,7 @@ section {
     position: relative;
 }
 
-#portfolio-text {
+.portfolio-text {
     font-family: monospace;
     color: #fff;
     margin-top: 15px;
@@ -128,7 +147,7 @@ section {
     position: relative;
 }
 
-#arow {
+.arow {
     position: relative;
     z-index: 1;
     margin-left: 285px;
@@ -136,12 +155,12 @@ section {
     margin-bottom: -120px;
 }
 
-#main2{
+.main2 {
     margin-top: 200px;
 
 }
 
-#devoloper {
+.devoloper {
     font-family: monospace;
     color: #fff;
     margin-top: -245px;
@@ -151,7 +170,7 @@ section {
     position: relative;
 }
 
-#specialized {
+.specialized {
     font-family: monospace;
     color: #fff;
     margin-top: 10px;
@@ -161,7 +180,7 @@ section {
     position: relative;
 }
 
-#html {
+.html {
     width: 105px;
     z-index: 10;
     position: relative;
@@ -169,7 +188,7 @@ section {
     margin-top: -55px;
 }
 
-#css {
+.css {
     width: 100px;
     z-index: 10;
     position: relative;
@@ -177,7 +196,7 @@ section {
     margin-top: -102px;
 }
 
-#javascript {
+.javascript {
     width: 67px;
     z-index: 10;
     position: relative;
@@ -185,7 +204,7 @@ section {
     margin-top: -83px;
 }
 
-#sql {
+.sql {
     width: 60px;
     z-index: 10;
     position: relative;
@@ -193,7 +212,7 @@ section {
     margin-top: -75px;
 }
 
-#main2-back{
+.main2-back {
     width: 750px;
     height: 350px;
     background-image: radial-gradient(#561d8b 0%, #19044900 350px);
@@ -202,7 +221,7 @@ section {
     margin-left: 75px;
 }
 
-#about{
+.about {
     font-size: 20px;
     color: #fff;
     text-align: center;
@@ -211,11 +230,11 @@ section {
     position: relative;
 }
 
-#main4{
+.main4 {
     margin-bottom: 60px;
 }
 
-#main4-back{
+.main4-back {
     width: 600px;
     height: 350px;
     background-image: radial-gradient(#561d8b 10%, #19044900 310px);
@@ -225,7 +244,7 @@ section {
     margin-top: 100px;
 }
 
-#exlpro{
+.exlpro {
     width: 230px;
     height: 35px;
     color: white;
@@ -238,7 +257,7 @@ section {
     position: relative;
 }
 
-#project-about{
+.project-about {
     width: 450px;
     height: 115px;
     border-radius: 20px;
@@ -248,9 +267,9 @@ section {
     position: relative;
 }
 
-#project-about>p{
+.project-about>p {
     color: #f6ffc2;
-    font-size:10px;
+    font-size: 10px;
     font-family: monospace;
     padding: 15px;
     margin: 0;
@@ -258,7 +277,7 @@ section {
     position: relative;
 }
 
-#project1pic{
+.project1pic {
     width: 450px;
     height: 270px;
     margin-left: 415px;
@@ -270,73 +289,73 @@ section {
     opacity: 0.8;
 }
 
-footer{
-    height: 300px;
-    background-color: #1A0B2E;
+/* Footer */
+.footer {
+    background: #0d001b;
+    /* deep purple-black to match your hero */
+    padding: 20px 20px;
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 80px;
 }
 
-footer>p{
-    font-size: 20px;
-    font-family: monospace;
-    color: white;
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-#menu{
-    font-size: 20px;
-    font-family: monospace;
-    color: white;
+.footer-logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 2px;
 }
 
-#service{
-    font-size: 20px;
-    font-family: monospace;
-    color: white;
+.footer-text {
+    color: #cfcfcf;
+    margin-top: 5px;
+    font-size: 0.8rem;
 }
 
-#menu-option{
-    list-style: none;
+.footer-links a {
+    margin: 0 12px;
+    color: #cfcfcf;
     text-decoration: none;
-    width: 121px;
+    font-size: 1rem;
+    transition: 0.3s;
 }
 
-
-#menu-option>li>a{
-    font-size: 20px;
-    font-family: monospace;
-    color: white;
-    text-decoration: none;
+.footer-links a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #fff;
 }
 
-#service-option{
-    list-style: none;
-    text-decoration: none;
-    width: 121px;
+.footer-socials a {
+    margin: 0 10px;
+    font-size: 1.4rem;
+    color: #cfcfcf;
+    transition: 0.3s;
 }
 
-#service-option>li>a{
-    font-size: 20px;
-    font-family: monospace;
-    color: white;
-    text-decoration: none;
+.footer-socials a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #9b59ff;
+    /* neon purple glow */
 }
 
-#social-link{
-    width: 200px;
-    height: 100px;
-    background-color: #561d8b;
-}
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        text-align: center;
+        flex-direction: column;
+        gap: 20px;
+    }
 
-#facebook{
-    width: 30px;
-    height: 30px;
-}
-
-#gethub{
-    width: 45px;
-    height: 45px;
-}
-
-#instagram{
-    width: 45px;
-    height: 45px;
+    .footer-links a {
+        margin: 0 8px;
+    }
 }
