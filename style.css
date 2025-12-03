@@ -1,5 +1,14 @@
 body {
     background-color: #130428;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page-warpper{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
 }
 
 /* NAV CONTAINER */
@@ -80,12 +89,6 @@ body {
         0 0 12px #bb86ff,
         0 0 30px rgba(187, 134, 255, 0.4);
 }
-
-
-section {
-    min-height: 900px;
-}
-
 
 
 .inpic {
