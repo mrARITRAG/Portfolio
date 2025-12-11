@@ -1,5 +1,5 @@
 ## Skill explanetion 1 ##
-**html**
+**HTML**
 <div id="main3">
             <div id="main3-back"></div>
             <pre id="skils">Along with Web-Dev, I am also knowledgeabel in</pre>
@@ -8,7 +8,7 @@
             <img id="python" src="images/python.png" alt="python">
         </div>
 
-**css**
+**CSS**
 #skils{
     color: #fff;
     font-size: 30px;
@@ -52,4 +52,126 @@
     position: relative;
     margin-left: 450px;
     margin-top: 150px;
+}
+
+
+
+
+##intro##
+**CSS**
+.inpic-back {
+    width: 360px;
+    height: 379px;
+    margin-left: 150px;
+    margin-top: 75px;
+    background-image: radial-gradient(#561d8b 0%, #19044900 170px);
+    border-radius: 50%;
+    z-index: 10;
+    position: relative;
+}
+
+.hello-text {
+    font-family: monospace;
+    color: #fff;
+    margin-top: -360px;
+    margin-left: 410px;
+    z-index: 10;
+    position: relative;
+}
+
+.small-intro-text {
+    font-family: monospace;
+    font-size: 30px;
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 460px;
+    z-index: 10;
+    position: relative;
+}
+
+.big-intro-text {
+    font-family: monospace;
+    font-size: 35px;
+    color: #fff;
+    margin-top: 5px;
+    margin-left: 490px;
+    margin-bottom: 0;
+    z-index: 10;
+    position: relative;
+}
+
+.portfolio-text {
+    font-family: monospace;
+    color: #fff;
+    margin-top: 15px;
+    margin-left: 660px;
+    font-size: 20px;
+    z-index: 10;
+    position: relative;
+}
+
+.arow {
+    position: relative;
+    z-index: 1;
+    margin-left: 343px;
+    width: 140px;
+    margin-bottom: -126px;
+}
+
+
+
+##slide-show##
+**HTML**
+<p class="exlpro">Example Project</p>
+                <div class="project-about">
+                    <p>A Web-Sites displaying details about different cars of category and price in a
+                        single place</p>
+                </div>
+                <img class="project1pic" src="images/project1Pic.png" alt="project1pic">
+
+
+**CSS**
+.exlpro {
+    width: 230px;
+    height: 35px;
+    color: white;
+    font-size: 25px;
+    font-family: monospace;
+    margin-top: -270px;
+    margin-bottom: 5px;
+    margin-left: 80px;
+    z-index: 10;
+    position: relative;
+}
+
+.project-about {
+    width: 450px;
+    height: 115px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #421d64 186px, #61b2ffab, #aed5faa3);
+    margin-left: 69px;
+    z-index: 10;
+    position: relative;
+}
+
+.project-about>p {
+    color: #f6ffc2;
+    font-size: 10px;
+    font-family: monospace;
+    padding: 15px;
+    margin: 0;
+    z-index: 10;
+    position: relative;
+}
+
+.project1pic {
+    width: 450px;
+    height: 270px;
+    margin-left: 415px;
+    margin-top: -205px;
+    z-index: 9;
+    position: relative;
+    box-shadow: 20px 20px #000000c7;
+    border-radius: 20px;
+    opacity: 0.8;
 }
