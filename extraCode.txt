@@ -175,3 +175,5 @@
     border-radius: 20px;
     opacity: 0.8;
 }
+
+<form action="https://formspree.io/f/xwpgawpk" method="POST">
