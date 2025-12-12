@@ -3,6 +3,9 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    
+    /* ADD THIS LINE */
+    overflow-x: hidden;
 }
 
 .page-warpper {
@@ -179,7 +182,7 @@ body {
     position: relative;
 }
 
-.slide-in {
+.slide-in-L {
     opacity: 0;
     transform: translateX(-120px);
     animation: slideFromLeft 1.4s ease forwards;
@@ -218,6 +221,26 @@ body {
     margin-left: 410px;
     z-index: 10;
     position: relative;
+
+}
+
+/* 1. The Class applied to .hello-text */
+.slide-in-R {
+    opacity: 0; /* Start hidden */
+    animation: slideFromRight 1s ease-out forwards; /* Run animation */
+    animation-delay: 0.2s; /* Optional: Wait slightly before starting */
+}
+
+/* 2. The Keyframes (The actual movement) */
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px); /* Start 100px to the right */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* End in final position */
+    }
 }
 
 .small-intro-text {
@@ -226,11 +249,62 @@ body {
     color: #fff;
     margin-top: 20px;
     margin-left: 415px;
+    margin-bottom: 20px;
     z-index: 10;
     position: relative;
 }
 
-.big-intro-text {
+
+/* --- 1. DEFINE THE KEYFRAMES --- */
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 80% }
+}
+
+/* The blinking cursor effect */
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+@keyframes remove-cursor {
+    to { border-right-color: transparent; }
+}
+
+/* --- 2. SHARED STYLES FOR INTRO TEXT --- */
+/* Apply base typewriter settings to all 4 paragraphs */
+.intro-text p {
+    overflow: hidden; /* Hides text before it's typed */
+    white-space: nowrap; /* Keeps text on one line */
+    border-right: 4px solid #bb86ff; /* The cursor color */
+    width: 0; /* Start hidden */
+}
+
+/* --- 3. SPECIFIC ANIMATIONS FOR EACH LINE --- */
+
+/* Line 1: "A Web-Devoloper who" */
+.small-intro-text {
+    /* ... keep your existing styles ... */
+    font-family: monospace;
+    font-size: 30px;
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 415px;
+    z-index: 10;
+    position: relative;
+    max-width: 22ch;
+
+    /* typing: 2s | blink: 3 times | remove-cursor: runs after 2s */
+    animation: 
+        typing 1s steps(19, end) forwards, 
+        blink .5s step-end,
+        remove-cursor 0s linear 1s forwards;
+}
+
+/* Line 2: "Creates Dynamic" */
+.big-intro-text1 {
+    /* ... keep your existing styles ... */
     font-family: monospace;
     font-size: 35px;
     color: #fff;
@@ -239,9 +313,38 @@ body {
     margin-bottom: 0;
     z-index: 10;
     position: relative;
+    max-width: 16ch; 
+
+    /* typing: 1.5s (del 2s) | blink: 2 times (del 2s) | remove-cursor: runs after 3.5s */
+    animation: 
+        typing 1.5s steps(16, end) .5s forwards, 
+        blink .75s step-end 2s,
+        remove-cursor 0s linear 1s forwards;
 }
 
+/* Line 3: " Web-Sites" */
+.big-intro-text2 {
+    /* ... keep your existing styles ... */
+    font-family: monospace;
+    font-size: 35px;
+    color: #fff;
+    margin-top: 5px;
+    margin-left: 425px;
+    margin-bottom: 0;
+    z-index: 10;
+    position: relative;
+    max-width: 12ch;
+
+    /* typing: 1s (del 3.5s) | blink: 2 times (del 3.5s) | remove-cursor: runs after 4.5s */
+    animation: 
+        typing 1s steps(12, end) 1s forwards, 
+        blink .75s step-end 3.5s 2,
+        remove-cursor 0s linear 1.5s forwards;
+}
+
+/* Line 4: "This is My Portfolio" */
 .portfolio-text {
+    /* ... keep your existing styles ... */
     font-family: monospace;
     color: #fff;
     margin-top: 15px;
@@ -249,6 +352,14 @@ body {
     font-size: 20px;
     z-index: 10;
     position: relative;
+    display: inline-block;
+    max-width: 21ch;
+
+    /* typing: 2s (del 4.5s) | blink: infinite (del 4.5s) */
+    /* We keep the last one infinite so the cursor stays on the final message */
+    animation: 
+        typing 2s steps(20, end) 1.5s forwards, 
+        blink .75s step-end 2s infinite;
 }
 
 .arow {
