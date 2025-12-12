@@ -3,7 +3,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    
+
     /* ADD THIS LINE */
     overflow-x: hidden;
 }
@@ -64,9 +64,10 @@ body {
 }
 
 @keyframes moveLeft {
-    from{
+    from {
         opacity: 1;
     }
+
     to {
         opacity: 0;
         transform: translateX(-100px);
@@ -74,7 +75,7 @@ body {
     }
 }
 
-.nav-socials{
+.nav-socials {
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -104,9 +105,10 @@ body {
 }
 
 @keyframes moveRight {
-    from{
+    from {
         opacity: 1;
     }
+
     to {
         opacity: 0;
         transform: translateX(100px);
@@ -193,10 +195,12 @@ body {
         opacity: 0;
         transform: translateX(-120px);
     }
+
     60% {
         opacity: 1;
         transform: translateX(15px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -226,20 +230,26 @@ body {
 
 /* 1. The Class applied to .hello-text */
 .slide-in-R {
-    opacity: 0; /* Start hidden */
-    animation: slideFromRight 1s ease-out forwards; /* Run animation */
-    animation-delay: 0.2s; /* Optional: Wait slightly before starting */
+    opacity: 0;
+    /* Start hidden */
+    animation: slideFromRight 1s ease-out forwards;
+    /* Run animation */
+    animation-delay: 0.2s;
+    /* Optional: Wait slightly before starting */
 }
 
 /* 2. The Keyframes (The actual movement) */
 @keyframes slideFromRight {
     from {
         opacity: 0;
-        transform: translateX(100px); /* Start 100px to the right */
+        transform: translateX(100px);
+        /* Start 100px to the right */
     }
+
     to {
         opacity: 1;
-        transform: translateX(0); /* End in final position */
+        transform: translateX(0);
+        /* End in final position */
     }
 }
 
@@ -259,26 +269,39 @@ body {
 
 /* The typing effect */
 @keyframes typing {
-    from { width: 0 }
-    to { width: 80% }
+    from {
+        width: 0
+    }
+
+    to {
+        width: 80%
+    }
 }
 
 /* The blinking cursor effect */
 @keyframes blink {
-    50% { border-color: transparent }
+    50% {
+        border-color: transparent
+    }
 }
 
 @keyframes remove-cursor {
-    to { border-right-color: transparent; }
+    to {
+        border-right-color: transparent;
+    }
 }
 
 /* --- 2. SHARED STYLES FOR INTRO TEXT --- */
 /* Apply base typewriter settings to all 4 paragraphs */
 .intro-text p {
-    overflow: hidden; /* Hides text before it's typed */
-    white-space: nowrap; /* Keeps text on one line */
-    border-right: 4px solid #bb86ff; /* The cursor color */
-    width: 0; /* Start hidden */
+    overflow: hidden;
+    /* Hides text before it's typed */
+    white-space: nowrap;
+    /* Keeps text on one line */
+    border-right: 4px solid #bb86ff;
+    /* The cursor color */
+    width: 0;
+    /* Start hidden */
 }
 
 /* --- 3. SPECIFIC ANIMATIONS FOR EACH LINE --- */
@@ -296,8 +319,8 @@ body {
     max-width: 22ch;
 
     /* typing: 2s | blink: 3 times | remove-cursor: runs after 2s */
-    animation: 
-        typing 1s steps(19, end) forwards, 
+    animation:
+        typing 1s steps(19, end) forwards,
         blink .5s step-end,
         remove-cursor 0s linear 1s forwards;
 }
@@ -313,11 +336,11 @@ body {
     margin-bottom: 0;
     z-index: 10;
     position: relative;
-    max-width: 16ch; 
+    max-width: 16ch;
 
     /* typing: 1.5s (del 2s) | blink: 2 times (del 2s) | remove-cursor: runs after 3.5s */
-    animation: 
-        typing 1.5s steps(16, end) .5s forwards, 
+    animation:
+        typing 1.5s steps(16, end) .5s forwards,
         blink .75s step-end 2s,
         remove-cursor 0s linear 1s forwards;
 }
@@ -336,8 +359,8 @@ body {
     max-width: 12ch;
 
     /* typing: 1s (del 3.5s) | blink: 2 times (del 3.5s) | remove-cursor: runs after 4.5s */
-    animation: 
-        typing 1s steps(12, end) 1s forwards, 
+    animation:
+        typing 1s steps(12, end) 1s forwards,
         blink .75s step-end 3.5s 2,
         remove-cursor 0s linear 1.5s forwards;
 }
@@ -357,8 +380,8 @@ body {
 
     /* typing: 2s (del 4.5s) | blink: infinite (del 4.5s) */
     /* We keep the last one infinite so the cursor stays on the final message */
-    animation: 
-        typing 2s steps(20, end) 1.5s forwards, 
+    animation:
+        typing 2s steps(20, end) 1.5s forwards,
         blink .75s step-end 2s infinite;
 }
 
@@ -372,9 +395,11 @@ body {
 
 .arow-appear {
     opacity: 0;
-    transform: translateX(40px);   /* small shift (not sliding) */
+    transform: translateX(40px);
+    /* small shift (not sliding) */
     animation: appearFromRight 1.2s ease-out forwards;
-    animation-delay: 0.4s;         /* delay for smooth entry */
+    animation-delay: 0.4s;
+    /* delay for smooth entry */
 }
 
 @keyframes appearFromRight {
@@ -382,6 +407,7 @@ body {
         opacity: 0;
         transform: translateX(40px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -394,7 +420,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 20px 40px;
+    padding: 70px 20px 40px;
     margin-top: 90px;
 }
 
@@ -405,8 +431,18 @@ body {
     font-family: monospace;
 }
 
+.hero-aboutMe {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: #ffffff;
+    border: 2px solid #bb86ff;
+    border-radius: 999px;
+    padding: 10px 22px;
+    display: inline-block;
+}
+
 .hero-subtitle {
-    font-size: 1.8rem;
+    font-size: 1rem;
     margin: 0 0 14px;
     color: #ffffff;
     line-height: 1.6;
@@ -417,62 +453,187 @@ body {
     color: #ffd86b;
 }
 
-/* Tech logo row */
+.hero-skills {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    display: inline-block;
+    margin: 10px 0px 0px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+}
+
+@keyframes spin-continuous {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 2. Apply it to the class */
+.rotating-gear {
+    font-size: 30px;
+    /* Adjust size */
+    color: #bb86ff;
+    padding: 5px;
+    /* Adjust color (using your theme purple) */
+    animation: spin-continuous 4s linear infinite;
+    /* 4s = speed */
+}
+
+/* --- TECH LOGOS CONTAINER --- */
 .tech-logos {
+    /* Layout */
     margin-top: 14px;
     display: flex;
     justify-content: center;
-    gap: 18px;
-    font-size: 2rem;
+    gap: 30px;
+    padding: 20px 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: fit-content;
+
+    /* Box Styling */
+    border-radius: 12px;
+    border: 2px solid #bb86ff;
+    background: #130428;
+
+    /* CRITICAL: Allow tooltips to show outside the box */
+    overflow: visible;
+
+    /* Neon Pulse Animation */
+    box-shadow: 0 0 15px rgba(187, 134, 255, 0.5);
+    animation: neonPulse 2s infinite alternate;
+    z-index: 1;
 }
 
-/* Logo style */
-/* Tech logo row */
-.tech-logos {
-    margin-top: 14px;
+/* Remove the old spinning effects if present */
+.tech-logos::before,
+.tech-logos::after {
+    display: none;
+}
+
+/* --- THE WRAPPER (Handles the Tooltip) --- */
+.icon-box {
+    position: relative;
+    /* Anchors the tooltip */
+    cursor: pointer;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
-    font-size: 2.2rem;
 }
 
-/* Keep original brand colors */
-.tech-logos i {
+/* TOOLTIP TEXT (Attached to Wrapper) */
+.icon-box::before {
+    content: attr(data-social);
+    /* Gets text from HTML */
+    position: absolute;
+    background-color: var(--accent-color);
+    /* Gets color from HTML style */
+    color: white;
+    font-size: 0.8rem;
+    font-family: monospace;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+    /* Position */
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+
+    /* Hide by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* TOOLTIP ARROW (Attached to Wrapper) */
+.icon-box::after {
+    content: '';
+    position: absolute;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid var(--accent-color);
+
+    /* Position */
+    bottom: 100%;
+    /* Sits right on top */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+
+    /* Hide by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+/* REVEAL TOOLTIP ON HOVER */
+.icon-box:hover::before,
+.icon-box:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* --- THE ICON (Inside the Wrapper) --- */
+.icon-box i {
+    font-size: 3rem;
     transition: 0.25s ease;
+    display: inline-block;
+    /* We DO NOT touch ::before here, so the icon stays safe! */
 }
 
-/* Individual neon glow per technology */
-.devicon-html5-plain {
-    color: #e34c26;
-    filter: drop-shadow(0 0 8px rgba(227, 76, 38, 0.8));
-}
-
-.devicon-css3-plain {
-    color: #2965f1;
-    filter: drop-shadow(0 0 8px rgba(41, 101, 241, 0.8));
-}
-
-.devicon-javascript-plain {
-    color: #f0db4f;
-    filter: drop-shadow(0 0 8px rgba(240, 219, 79, 0.8));
-}
-
-.devicon-java-plain {
-    color: #ff6f00;
-    filter: drop-shadow(0 0 8px rgba(255, 111, 0, 0.8));
-}
-
-.devicon-c-plain {
-    color: #5c6bc0;
-    filter: drop-shadow(0 0 8px rgba(92, 107, 192, 0.8));
-}
-
-/* Hover effect - strong cyber glow */
-.tech-logos i:hover {
+/* HOVER EFFECT ON ICON */
+/* When you hover the box, the icon inside jumps */
+.icon-box:hover i {
     transform: translateY(-4px) scale(1.08);
     filter: drop-shadow(0 0 18px currentColor);
 }
 
+/* --- NEON PULSE KEYFRAMES --- */
+@keyframes neonPulse {
+    from {
+        box-shadow: 0 0 10px #bb86ff, inset 0 0 5px #bb86ff;
+        border-color: #bb86ff;
+    }
+
+    to {
+        box-shadow: 0 0 25px #ff6bcb, 0 0 10px #bb86ff, inset 0 0 10px #ff6bcb;
+        border-color: #ff6bcb;
+    }
+}
+
+/* --- ICON SPECIFIC COLORS --- */
+/* (These ensure icons have color even if not hovered) */
+.devicon-html5-plain {
+    color: #e34c26;
+}
+
+.devicon-css3-plain {
+    color: #2965f1;
+}
+
+.devicon-javascript-plain {
+    color: #f0db4f;
+}
+
+.devicon-java-plain {
+    color: #ff6f00;
+}
+
+.devicon-c-plain {
+    color: #5c6bc0;
+}
 
 
 .hero-subtitle span {
@@ -480,10 +641,10 @@ body {
 }
 
 .hero-description {
-    font-size: 0.95rem;
+    font-size: 0.7rem;
     color: #d0c6ff;
     line-height: 1.7;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 /* Buttons */
@@ -536,13 +697,141 @@ body {
     justify-content: center;
 }
 
+.slide-show-projects{
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: #ffffff;
+    border: 2px solid #bb86ff;
+    border-radius: 999px;
+    padding: 10px 22px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 40px;
+}
+
 .slide-show-back {
     width: 600px;
     height: 350px;
     background-image: radial-gradient(#561d8b 10%, #19044900 310px);
     z-index: 1;
-    position: relative;
+    position: absolute;
     margin-top: 120px;
+}
+
+/* --- SLIDER LAYOUT --- */
+.slider-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    z-index: 10; /* Sits above the background glow */
+    margin-top: 120px; /* Pulls it up over your .slide-show-back background */
+}
+
+.slider-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 10px;
+    
+    /* Hide scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+.slider-container::-webkit-scrollbar { 
+    display: none; /* Chrome/Safari */
+}
+
+/* --- CARD STYLING --- */
+.project-card {
+    min-width: 300px; /* Force card width */
+    height: 320px;
+    background: rgba(20, 0, 45, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #bb86ff;
+    box-shadow: 0 0 20px rgba(187, 134, 255, 0.3);
+}
+
+.card-image {
+    height: 50%;
+    width: 100%;
+    /* Gradient handled inline in HTML, or add img tag here */
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 35%;
+    color: #fff;
+    font-family: monospace;
+}
+
+.card-content h3 {
+    margin: 0;
+    color: #bb86ff;
+    font-size: 1rem;
+}
+
+.card-content p {
+    font-size: 0.7rem;
+    color: #cfcfcf;
+    line-height: 1.5;
+}
+
+/* --- NAVIGATION BUTTONS --- */
+.slide-btn {
+    background: rgba(20, 0, 45, 0.8);
+    color: #bb86ff;
+    border: 1px solid #bb86ff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    z-index: 20;
+    flex-shrink: 0; /* Prevents buttons from squishing */
+}
+
+.slide-btn:hover {
+    background: #bb86ff;
+    color: #130428;
+    box-shadow: 0 0 15px #bb86ff;
+}
+
+/* --- RESPONSIVENESS --- */
+/* Adjust card width based on screen size */
+@media (max-width: 768px) {
+    .project-card {
+        min-width: 280px; /* Smaller cards on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-wrapper {
+        width: 100%;
+    }
+    .project-card {
+        min-width: 85vw; /* Full width cards on mobile */
+    }
+    .slide-btn {
+        display: none; /* Optional: Hide arrows on mobile (swipe is intuitive) */
+    }
 }
 
 

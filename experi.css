@@ -1,0 +1,12 @@
+/* 1. Define the rotation animation */
+@keyframes spin-continuous {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 2. Apply it to the class */
+.rotating-gear {
+    font-size: 50px;       /* Adjust size */
+    color: #bb86ff;        /* Adjust color (using your theme purple) */
+    animation: spin-continuous 4s linear infinite; /* 4s = speed */
+}

@@ -8,3 +8,19 @@ items.forEach(item => {
   });
 });
 
+// ... existing code ...
+
+const slider = document.getElementById('slider');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+// Scroll Amount (approx card width + gap)
+const scrollAmount = 320; 
+
+nextBtn.addEventListener('click', () => {
+    slider.scrollLeft += scrollAmount;
+});
+
+prevBtn.addEventListener('click', () => {
+    slider.scrollLeft -= scrollAmount;
+});

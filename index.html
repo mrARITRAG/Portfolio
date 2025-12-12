@@ -7,8 +7,7 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body>
@@ -43,6 +42,7 @@
             </div>
             <div class="hero" id="about">
                 <div class="hero-content">
+                    <p class="hero-aboutMe">About Me</p>
 
                     <p class="hero-subtitle">
                         Hi, I’m <span class="name-glow">Aritra Ghosh</span>, a Web & Software Developer who builds
@@ -54,12 +54,29 @@
                         I love turning ideas into clean, functional, and user-friendly products.
                     </p>
 
+                    <p class="hero-skills"><i class="fas fa-gear rotating-gear"></i> Skills <i
+                            class="fas fa-gear rotating-gear"></i></p>
+
                     <div class="tech-logos">
-                        <i class="devicon-html5-plain"></i>
-                        <i class="devicon-css3-plain"></i>
-                        <i class="devicon-javascript-plain"></i>
-                        <i class="devicon-java-plain"></i>
-                        <i class="devicon-c-plain"></i>
+                        <div class="icon-box" data-social="HTML" style="--accent-color:#e34c26">
+                            <i class="devicon-html5-plain"></i>
+                        </div>
+
+                        <div class="icon-box" data-social="CSS" style="--accent-color:#2965f1">
+                            <i class="devicon-css3-plain"></i>
+                        </div>
+
+                        <div class="icon-box" data-social="JavaScript" style="--accent-color:#f0db4f">
+                            <i class="devicon-javascript-plain"></i>
+                        </div>
+
+                        <div class="icon-box" data-social="Java" style="--accent-color:#ff6f00">
+                            <i class="devicon-java-plain"></i>
+                        </div>
+
+                        <div class="icon-box" data-social="C" style="--accent-color:#5c6bc0">
+                            <i class="devicon-c-plain"></i>
+                        </div>
                     </div>
 
                     <div class="hero-actions">
@@ -71,8 +88,52 @@
             </div>
 
             <div class="slide-show" id="project">
+                <p class="slide-show-projects">Projects</p>
                 <div class="slide-show-back"></div>
 
+                <div class="slider-wrapper">
+                    <button class="slide-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+
+                    <div class="slider-container" id="slider">
+                        <div class="project-card">
+                            <div class="card-image" style="background: linear-gradient(45deg, #7b2cff, #bb86ff);"></div>
+                            <div class="card-content">
+                                <h3>Project One</h3>
+                                <p>A web application built with React and Node.js.</p>
+                                <a href="#" class="btn-primary">View Code</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="card-image" style="background: linear-gradient(45deg, #ff6bcb, #ff9e6b);"></div>
+                            <div class="card-content">
+                                <h3>Project Two</h3>
+                                <p>Interactive dashboard using Python and D3.js.</p>
+                                <a href="#" class="btn-primary">View Code</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="card-image" style="background: linear-gradient(45deg, #2965f1, #00d4ff);"></div>
+                            <div class="card-content">
+                                <h3>Project Three</h3>
+                                <p>E-commerce platform with Stripe integration.</p>
+                                <a href="#" class="btn-primary">View Code</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="card-image" style="background: linear-gradient(45deg, #f0db4f, #d4a000);"></div>
+                            <div class="card-content">
+                                <h3>Project Four</h3>
+                                <p>Mobile-first responsive portfolio template.</p>
+                                <a href="#" class="btn-primary">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="slide-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </div>
 
         </section>
